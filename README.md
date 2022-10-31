@@ -34,4 +34,4 @@
 * Завершить работу с git_mode: `q`. 
 
 Остальные команды можно посмотреть в папке с git_mode:
-C:\Users/\"USERNAME"\git_mode
+C:\Users\ "USERNAME" \git_mode
