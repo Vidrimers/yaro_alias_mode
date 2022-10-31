@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+echo "## FUCKIN GIT MODE IS OFF ##"
+
+# Add
+unalias ga
+unalias add
+
+# Diff
+unalias d
+unalias diff
+
+# Grep/Search
+unalias search
+unalias grep
+
+# Merge
+unalias merge
+unalias gm
+
+# Branch
+unalias gb
+
+# Status
+unalias gs
+unalias status
+
+# Commit
+unalias gc
+unalias commit
+
+# Remote
+unalias remote
+
+# Pull
+unalias pull
+
+# Push
+unalias push
+
+# init
+unalias init
+unalias gi
+
+# clone
+unalias clone
+
+# checkout
+unalias ch
+unalias checkout
+
+# stash
+unalias stash

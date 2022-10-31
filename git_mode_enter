@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+### [git alias /.bashrc] ###
+
+echo "## FUCKIN GIT MODE IS ON ##"
+
+# Deploy
+alias dep="npm run deploy"
+
+# init
+alias init='git init'
+alias gi='git init'
+
+# Status
+alias gs='git status'
+alias status='git status'
+
+# Add
+alias ga='git add .'
+alias add='git add'
+
+# Commit
+alias gc='git commit -m'
+alias commit='git commit'
+
+# Push
+alias push='git push'
+alias gp='git push'
+
+# Branch
+alias gb='git branch'
+
+# checkout
+alias ch='git checkout'
+alias checkout='git checkout'
+
+# clone
+alias clone='git clone'
+
+# Diff
+alias d='git diff'
+alias diff='git diff'
+
+# Grep/Search
+alias search='git grep'
+alias grep='git grep'
+
+# Merge
+alias merge='git merge'
+alias gm='git merge'
+
+# Remote
+alias remote='git remote'
+
+# Pull
+alias pull='git pull'
+
+# stash
+alias stash='git stash'
