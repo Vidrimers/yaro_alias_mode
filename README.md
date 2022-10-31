@@ -23,7 +23,7 @@
 | `npm run deploy`              | `dep`                |
 
 # Установка
-Скопировать команды без кавычек и вставить в окно терминала по очереди
+Скопировать команды и вставить в окно терминала (GitBash) по очереди
  1. Клонировать репозиторий в терминале `cd ~ && git clone https://github.com/Vidrimers/git_mode`.
  1. chmod git_mode `chmod +x ~/git_mode/`
  1. Установить скрипт `~/git_mode/install`
