@@ -35,3 +35,5 @@
 
 Остальные команды можно посмотреть и добавить свои в папке с yaro_alias_mode:
 C: \ Users \ "USERNAME" \ yaro_alias_mode
+
+Взято, переведено и исправлено отсюда: https://github.com/Tredecies/git_mode/
