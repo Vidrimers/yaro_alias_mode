@@ -1,13 +1,13 @@
-# Fucking Git Mode
+# Fucking Alias Mode
 Алиасы для гита
 
 # Описание
 Режим терминала Git, позволяющий быстрее использовать Git команды с помощью имеющегося терминала
 
-Сравнение Git and git_mode:
+Сравнение Git and yaro_alias_mode:
 
 
-| Обычные комнады Git           | git_mode             |
+| Обычные комнады Git           | yaro_alias_mode      |
 |-------------------------------|----------------------|
 | `git status`                  | `gs`                 |
 | `git init`                    | `init`               |
@@ -24,14 +24,14 @@
 
 # Установка
 Скопировать команды и вставить в окно терминала (GitBash) по очереди
- 1. Клонировать репозиторий в терминале `cd ~ && git clone https://github.com/Vidrimers/git_mode`.
- 1. chmod git_mode `chmod +x ~/git_mode/`
- 1. Установить скрипт `~/git_mode/install`
+ 1. Клонировать репозиторий в терминале `cd ~ && git clone https://github.com/Vidrimers/yaro_alias_mode`.
+ 1. chmod yaro_alias_mode `chmod +x ~/yaro_alias_mode/`
+ 1. Установить скрипт `~/yaro_alias_mode/install`
 
-# Работа с git_mode
-Чтобы git_mode заработал, его надо активировать в терминале.
-* Активировать git_mode: `g` `<Enter>`.
-* Завершить работу с git_mode: `q`. 
+# Работа с yaro_alias_mode
+Чтобы yaro_alias_mode заработал, его надо активировать в терминале.
+* Активировать yaro_alias_mode: `g` `<Enter>`.
+* Завершить работу с yaro_alias_mode: `q`. 
 
-Остальные команды можно посмотреть и добавить свои в папке с git_mode:
-C: \ Users \ "USERNAME" \ git_mode
+Остальные команды можно посмотреть и добавить свои в папке с yaro_alias_mode:
+C: \ Users \ "USERNAME" \ yaro_alias_mode

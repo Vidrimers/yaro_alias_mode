@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ### [git alias /.bashrc] ###
 
-echo "## FUCKIN GIT MODE IS ON ##"
+echo "## FUCKIN ALIAS MODE IS ACTIVE ##"
 
 # Deploy
 alias dep="npm run deploy"

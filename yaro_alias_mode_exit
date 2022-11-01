@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "## FUCKIN GIT MODE IS OFF ##"
+echo "## FUCKIN ALIAS MODE IS DEACTIVE ##"
 
 # Add
 unalias ga
