@@ -2,57 +2,113 @@
 ### [git alias /.bashrc] ###
 
 echo "## FUCKIN ALIAS MODE IS ACTIVE ##"
+echo "## 'helpmeplz' - помощь по алиасам ##"
+echo "## 'q' - деактивация алиасов ##"
 
-# Deploy
+# DEV
+
+# Деплой проекта на гит
 alias dep="npm run deploy"
 
-# init
+# npm run dev
+alias dev="npm run dev"
+
+# `npm run lint` - проверка кода ESLint
+alias lint="npm run lint"
+
+# `npm run lint:fix` - автоматическое исправление ошибок 
+alias lintfix="npm run lint:fix"
+
+# `npm run stylelint` - проверка CSS стилей 
+alias style="npm run stylelint"
+
+# `npm run stylelint:fix` - автоматическое исправление ошибок Stylelint 
+alias stylefix="npm run stylelint:fix"
+
+# `npm test` - запуск тестов 
+alias tst="npm test"
+
+# `npm run docs` - генерация документации
+alias doc="npm run docs"
+
+# GIT
+
+# git init - Инициализация нового репозитория
 alias init='git init'
 alias gi='git init'
 
-# Status
+# git status - Проверка статуса репозитория
 alias gs='git status'
 alias status='git status'
 
-# Add
+# git add . - Добавить все изменения
 alias ga='git add .'
+# git add - Добавить указанные файлы
 alias add='git add'
 
-# Commit
+# git commit -m - Создать коммит с сообщением
 alias gc='git commit -m'
+# git commit - Обычный коммит
 alias commit='git commit'
 
-# Push
+# git push - Отправить изменения на удалённый репозиторий
 alias push='git push'
 alias gp='git push'
 
-# Branch
+# git branch - Список веток
 alias gb='git branch'
 
-# checkout
+# git checkout - Переключиться на ветку
 alias ch='git checkout'
 alias checkout='git checkout'
 
-# clone
+# git clone - Клонировать репозиторий
 alias clone='git clone'
 
-# Diff
+# git diff - Показать различия
 alias d='git diff'
 alias diff='git diff'
 
-# Grep/Search
+# git grep - Поиск по репозиторию
 alias search='git grep'
 alias grep='git grep'
 
-# Merge
+# git merge - Слить ветки
 alias merge='git merge'
 alias gm='git merge'
 
-# Remote
+# git remote - Управление удалёнными репозиториями
 alias remote='git remote'
 
-# Pull
+# git pull - Получить изменения с удалённого репозитория
 alias pull='git pull'
 
-# stash
+# git stash - Сохранить текущие изменения во временное хранилище
 alias stash='git stash'
+
+# Список алиасов в терминале
+# alias hlpmeplz='alias'
+
+#helpmeplz() {
+ #   echo "Алиасы из Yaro aliasmode:"
+  #  grep "^alias " ~/yaro_alias_mode_enter
+#}
+
+helpmeplz() {
+    local file="/c/Users/vidri/yaro_alias_mode/yaro_alias_mode_enter"
+    local count=1
+    local prev_comment=""
+    while IFS= read -r line; do
+        # Если строка — комментарий, сохраняем её
+        if [[ $line =~ ^# ]]; then
+            prev_comment=$(echo "$line" | sed 's/^# *//')
+        # Если строка — алиас, выводим его с предыдущим комментарием
+        elif [[ $line == alias* ]]; then
+            name=$(echo "$line" | cut -d= -f1 | awk '{print $2}')
+            command=$(echo "$line" | cut -d= -f2 | sed "s/^'//;s/'$//")
+            printf "\e[1;32m%d.\e[0m \e[1;36m%s\e[0m → \e[0;33m%s\e[0m\n    %s\n\n" "$count" "$name" "$command" "$prev_comment"
+            ((count++))
+            prev_comment=""  # Сброс комментария после использования
+        fi
+    done < "$file"
+}
