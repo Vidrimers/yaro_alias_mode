@@ -13,6 +13,9 @@ alias dep="npm run deploy"
 # npm run dev
 alias dev="npm run dev"
 
+# npm run build
+alias bld="npm run build"
+
 # `npm run lint` - проверка кода ESLint
 alias lint="npm run lint"
 

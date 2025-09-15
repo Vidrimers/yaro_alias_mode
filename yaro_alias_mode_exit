@@ -2,52 +2,86 @@
 
 echo "## FUCKIN ALIAS MODE IS DEACTIVE ##"
 
-# Add
-unalias ga
-unalias add
+# DEV
 
-# Diff
-unalias d
-unalias diff
+# Деплой проекта на гит
+unalias dep="npm run deploy"
 
-# Grep/Search
-unalias search
-unalias grep
+# npm run dev
+unalias dev="npm run dev"
 
-# Merge
-unalias merge
-unalias gm
+# npm run build
+unalias bld="npm run build"
 
-# Branch
-unalias gb
+# `npm run lint` - проверка кода ESLint
+unalias lint="npm run lint"
 
-# Status
-unalias gs
-unalias status
+# `npm run lint:fix` - автоматическое исправление ошибок 
+unalias lintfix="npm run lint:fix"
 
-# Commit
-unalias gc
-unalias commit
+# `npm run stylelint` - проверка CSS стилей 
+unalias style="npm run stylelint"
 
-# Remote
-unalias remote
+# `npm run stylelint:fix` - автоматическое исправление ошибок Stylelint 
+unalias stylefix="npm run stylelint:fix"
 
-# Pull
-unalias pull
+# `npm test` - запуск тестов 
+unalias tst="npm test"
 
-# Push
-unalias push
+# `npm run docs` - генерация документации
+unalias doc="npm run docs"
 
-# init
-unalias init
-unalias gi
+# GIT
 
-# clone
-unalias clone
+# git init - Инициализация нового репозитория
+unalias init='git init'
+unalias gi='git init'
 
-# checkout
-unalias ch
-unalias checkout
+# git status - Проверка статуса репозитория
+unalias gs='git status'
+unalias status='git status'
 
-# stash
-unalias stash
+# git add . - Добавить все изменения
+unalias ga='git add .'
+# git add - Добавить указанные файлы
+unalias add='git add'
+
+# git commit -m - Создать коммит с сообщением
+unalias gc='git commit -m'
+# git commit - Обычный коммит
+unalias commit='git commit'
+
+# git push - Отправить изменения на удалённый репозиторий
+unalias push='git push'
+unalias gp='git push'
+
+# git branch - Список веток
+unalias gb='git branch'
+
+# git checkout - Переключиться на ветку
+unalias ch='git checkout'
+unalias checkout='git checkout'
+
+# git clone - Клонировать репозиторий
+unalias clone='git clone'
+
+# git diff - Показать различия
+unalias d='git diff'
+unalias diff='git diff'
+
+# git grep - Поиск по репозиторию
+unalias search='git grep'
+unalias grep='git grep'
+
+# git merge - Слить ветки
+unalias merge='git merge'
+unalias gm='git merge'
+
+# git remote - Управление удалёнными репозиториями
+unalias remote='git remote'
+
+# git pull - Получить изменения с удалённого репозитория
+unalias pull='git pull'
+
+# git stash - Сохранить текущие изменения во временное хранилище
+unalias stash='git stash'

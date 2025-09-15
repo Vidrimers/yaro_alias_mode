@@ -12,6 +12,7 @@
 | ----------------------- | --------------- |
 | `npm run deploy`        | `dep`           |
 | `npm run dev`           | `dev`           |
+| `npm run build`         | `bld`           |
 | `npm run lint`          | `lint`          |
 | `npm run lint:fix`      | `lintfix`       |
 | `npm run stylelint`     | `style`         |
