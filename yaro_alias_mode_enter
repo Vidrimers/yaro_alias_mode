@@ -89,6 +89,10 @@ alias pull='git pull'
 # git stash - Сохранить текущие изменения во временное хранилище
 alias stash='git stash'
 
+# rm -rI 'имя файла или папки' - Удаление файла или папки с подтверждением
+alias del='rm -rI'
+
+
 # Список алиасов в терминале
 # alias hlpmeplz='alias'
 
