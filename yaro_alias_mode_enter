@@ -89,17 +89,39 @@ alias pull='git pull'
 # git stash - Сохранить текущие изменения во временное хранилище
 alias stash='git stash'
 
+#git reset --hard - Сбросить все изменения к последнему коммиту
+alias reset='git reset --hard '
+
+# git log - Просмотр истории коммитов
+alias log='git log'
+
+# git reflog - Просмотр всех изменений в репозитории
+alias ref='git reflog'
+
 # rm -rI 'имя файла или папки' - Удаление файла или папки с подтверждением
 alias del='rm -rI'
 
+# CLASP
 
-# Список алиасов в терминале
-# alias hlpmeplz='alias'
+# clasp deploy - Деплой проекта в Google Apps Script
+alias cldep='clasp deploy'
 
-#helpmeplz() {
- #   echo "Алиасы из Yaro aliasmode:"
-  #  grep "^alias " ~/yaro_alias_mode_enter
-#}
+# clasp push - Загрузка изменений в Google Apps Script
+alias clp='clasp push'
+
+# clasp watch - Автоматическая загрузка изменений при сохранении файлов
+alias clpw='clasp push -w'
+
+# clasp status - Проверка статуса проекта
+alias clst='clasp status'
+
+# clasp pull - Загрузка изменений из Google Apps Script
+alias clpull='clasp pull'
+
+# clasp open - Открыть проект в браузере
+alias clo='clasp open'
+
+alias vdsina='ssh -i ~/.ssh/id_ed25519_vdsina root@144.124.237.222'
 
 helpmeplz() {
     local file="$HOME/yaro_alias_mode/yaro_alias_mode_enter"
