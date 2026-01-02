@@ -32,15 +32,15 @@
 | `git checkout`                | `ch`, `checkout`   |
 | `git branch`                  | `gb`               |
 | `git clone`                   | `clone`            |
-| `git diff`                    | `d`, `diff`        |
+| `git diff`                    | `gd`, `diff`       |
+| `git log`                     | `log`              |
+| `git reflog`                  | `ref`              |
 | `git grep`                    | `search`, `grep`   |
 | `git merge`                   | `merge`, `gm`      |
 | `git remote`                  | `remote`           |
 | `git pull`                    | `pull`             |
 | `git stash`                   | `stash`            |
 | `git reset --hard`            | `reset`            |
-| `git log`                     | `log`              |
-| `git reflog`                  | `ref`              |
 
 | BASH команды                | yaro_alias_mode |
 | --------------------------- | --------------- |

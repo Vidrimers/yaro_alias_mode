@@ -69,8 +69,14 @@ alias checkout='git checkout'
 alias clone='git clone'
 
 # git diff - Показать различия
-alias d='git diff'
+alias gd='git diff'
 alias diff='git diff'
+
+# git log - Просмотр истории коммитов
+alias log='git log'
+
+# git reflog - Просмотр всех изменений в репозитории
+alias ref='git reflog'
 
 # git grep - Поиск по репозиторию
 alias search='git grep'
@@ -91,12 +97,6 @@ alias stash='git stash'
 
 #git reset --hard - Сбросить все изменения к последнему коммиту
 alias reset='git reset --hard '
-
-# git log - Просмотр истории коммитов
-alias log='git log'
-
-# git reflog - Просмотр всех изменений в репозитории
-alias ref='git reflog'
 
 # rm -rI 'имя файла или папки' - Удаление файла или папки с подтверждением
 alias del='rm -rI'
