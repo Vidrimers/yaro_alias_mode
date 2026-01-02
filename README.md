@@ -75,7 +75,11 @@
 - помощь по алиасам: `helpmeplz`
 - Завершить работу с yaro_alias_mode: `q`.
 
-Остальные команды можно посмотреть через терминал в `helpmeplz`, добавить свои в папке с yaro_alias_mode:
-C: \ Users \ "USERNAME" \ yaro_alias_mode
+Остальные команды можно посмотреть в ui окне через `helpmeplz` в терминале
+
+  <img src="img/help.jpg" width=600>
+
+Свои алиасы можно добавить в папке с yaro_alias_mode:
+%USERPROFILE%\yaro_alias_mode
 
 Взято, переведено и исправлено отсюда: https://github.com/Tredecies/git_mode/

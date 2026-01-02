@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ### [git alias /.bashrc] ###
 
-echo "## FUCKIN ALIAS MODE IS ACTIVE ##"
+echo "## YARO ALIAS MODE IS ACTIVE ##"
 echo "## 'helpmeplz' - помощь по алиасам ##"
 echo "## 'q' - деактивация алиасов ##"
 
@@ -124,20 +124,25 @@ alias clo='clasp open'
 alias vdsina='ssh -i ~/.ssh/id_ed25519_vdsina root@144.124.237.222'
 
 helpmeplz() {
-    local file="$HOME/yaro_alias_mode/yaro_alias_mode_enter"
-    local count=1
-    local prev_comment=""
-    while IFS= read -r line; do
-        # Если строка — комментарий, сохраняем её
-        if [[ $line =~ ^# ]]; then
-            prev_comment=$(echo "$line" | sed 's/^# *//')
-        # Если строка — алиас, выводим его с предыдущим комментарием
-        elif [[ $line == alias* ]]; then
-            name=$(echo "$line" | cut -d= -f1 | awk '{print $2}')
-            command=$(echo "$line" | cut -d= -f2 | sed "s/^'//;s/'$//")
-            printf "\e[1;32m%d.\e[0m \e[1;36m%s\e[0m → \e[0;33m%s\e[0m\n    %s\n\n" "$count" "$name" "$command" "$prev_comment"
-            ((count++))
-            prev_comment=""  # Сброс комментария после использования
-        fi
-    done < "$file"
+    if command -v ahk >/dev/null 2>&1 || command -v AutoHotkey.exe >/dev/null 2>&1; then
+        ahk "$HOME/yaro_alias_mode/help.ahk" || AutoHotkey.exe "$HOME/yaro_alias_mode/help.ahk"
+    elif command -v powershell.exe >/dev/null 2>&1; then
+        powershell.exe -ExecutionPolicy Bypass -File "$HOME/yaro_alias_mode/help.ps1"
+    else
+        # Терминал: вывод построчно с цветами
+        local file="$HOME/yaro_alias_mode/yaro_alias_mode_enter"
+        local count=1
+        local prev_comment=""
+        while IFS= read -r line; do
+            if [[ $line =~ ^# ]]; then
+                prev_comment=$(echo "$line" | sed 's/^# *//')
+            elif [[ $line == alias* ]]; then
+                name=$(echo "$line" | cut -d= -f1 | awk '{print $2}')
+                command=$(echo "$line" | cut -d= -f2 | sed "s/^'//;s/'$//")
+                printf "\e[1;32m%d.\e[0m \e[1;36m%s\e[0m → \e[0;33m%s\e[0m\n    %s\n\n" "$count" "$name" "$command" "$prev_comment"
+                ((count++))
+                prev_comment=""
+            fi
+        done < "$file"
+    fi
 }
