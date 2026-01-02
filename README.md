@@ -1,4 +1,4 @@
-# Fucking Alias Mode
+# Yaro Alias Mode
 
 Алиасы для гита и разработки
 
@@ -22,22 +22,42 @@
 
 | GIT команды                   | yaro_alias_mode    |
 | ----------------------------- | ------------------ |
-| `git status`                  | `gs`               |
-| `git init`                    | `init`             |
+| `git status`                  | `gs`, `status`     |
+| `git init`                    | `init`, `gi`       |
 | `git add .`                   | `ga`               |
+| `git add`                     | `add`              |
 | `git commit -m 'комментарий'` | `gc 'комментарий'` |
-| `git push`                    | `gp`               |
-| `git checkout`                | `ch`               |
+| `git commit`                  | `commit`           |
+| `git push`                    | `push`, `gp`       |
+| `git checkout`                | `ch`, `checkout`   |
 | `git branch`                  | `gb`               |
 | `git clone`                   | `clone`            |
-| `git merge`                   | `gm`               |
+| `git diff`                    | `d`, `diff`        |
+| `git grep`                    | `search`, `grep`   |
+| `git merge`                   | `merge`, `gm`      |
 | `git remote`                  | `remote`           |
 | `git pull`                    | `pull`             |
+| `git stash`                   | `stash`            |
+| `git reset --hard`            | `reset`            |
+| `git log`                     | `log`              |
+| `git reflog`                  | `ref`              |
 
+| BASH команды                | yaro_alias_mode |
+| --------------------------- | --------------- |
+| `rm -rI  'имя файла/папки'` | `del 'имя'`     |
 
-| BASH команды                  | yaro_alias_mode    |
-| ----------------------------- | ------------------ |
-| `rm -rI  'имя файла/папки'`   | `del 'имя'`        |
+| CLASP команды   | yaro_alias_mode |
+| --------------- | --------------- |
+| `clasp deploy`  | `cldep`         |
+| `clasp push`    | `clp`           |
+| `clasp push -w` | `clpw`          |
+| `clasp status`  | `clst`          |
+| `clasp pull`    | `clpull`        |
+| `clasp open`    | `clo`           |
+
+| SSH команды                                            | yaro_alias_mode |
+| ------------------------------------------------------ | --------------- |
+| `ssh -i ~/.ssh/id_ed25519_vdsina root@144.124.237.222` | `vdsina`        |
 
 # Установка
 
