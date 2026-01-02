@@ -124,10 +124,25 @@ alias clo='clasp open'
 alias vdsina='ssh -i ~/.ssh/id_ed25519_vdsina root@144.124.237.222'
 
 helpmeplz() {
-    if command -v ahk >/dev/null 2>&1 || command -v AutoHotkey.exe >/dev/null 2>&1; then
-        ahk "$HOME/yaro_alias_mode/help.ahk" || AutoHotkey.exe "$HOME/yaro_alias_mode/help.ahk"
-    elif command -v powershell.exe >/dev/null 2>&1; then
-        powershell.exe -ExecutionPolicy Bypass -File "$HOME/yaro_alias_mode/help.ps1"
+    if [ -f "$HOME/yaro_alias_mode/help.exe" ]; then
+        "$HOME/yaro_alias_mode/help.exe"
+        if [ $? -ne 0 ]; then
+            # Терминал: вывод построчно с цветами
+            local file="$HOME/yaro_alias_mode/yaro_alias_mode_enter"
+            local count=1
+            local prev_comment=""
+            while IFS= read -r line; do
+                if [[ $line =~ ^# ]]; then
+                    prev_comment=$(echo "$line" | sed 's/^# *//')
+                elif [[ $line == alias* ]]; then
+                    name=$(echo "$line" | cut -d= -f1 | awk '{print $2}')
+                    command=$(echo "$line" | cut -d= -f2 | sed "s/^'//;s/'$//")
+                    printf "\e[1;32m%d.\e[0m \e[1;36m%s\e[0m → \e[0;33m%s\e[0m\n    %s\n\n" "$count" "$name" "$command" "$prev_comment"
+                    ((count++))
+                    prev_comment=""
+                fi
+            done < "$file"
+        fi
     else
         # Терминал: вывод построчно с цветами
         local file="$HOME/yaro_alias_mode/yaro_alias_mode_enter"
